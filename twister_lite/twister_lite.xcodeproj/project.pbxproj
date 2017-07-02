@@ -7,14 +7,17 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5259A2EB1F098E38006912A5 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5259A2EA1F098E38006912A5 /* LoginViewController.swift */; };
 		5265D4CA1F098B18005FD42A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5265D4C91F098B18005FD42A /* AppDelegate.swift */; };
 		5265D4CC1F098B18005FD42A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5265D4CB1F098B18005FD42A /* ViewController.swift */; };
 		5265D4CF1F098B18005FD42A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5265D4CD1F098B18005FD42A /* Main.storyboard */; };
 		5265D4D11F098B18005FD42A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5265D4D01F098B18005FD42A /* Assets.xcassets */; };
 		5265D4D41F098B18005FD42A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5265D4D21F098B18005FD42A /* LaunchScreen.storyboard */; };
+		D0508A4DB9AE5BD7C8456DC8 /* Pods_twister_lite.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CFCA580EFCC5FADA7428B81F /* Pods_twister_lite.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		5259A2EA1F098E38006912A5 /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		5265D4C61F098B18005FD42A /* twister_lite.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = twister_lite.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5265D4C91F098B18005FD42A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		5265D4CB1F098B18005FD42A /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -22,6 +25,9 @@
 		5265D4D01F098B18005FD42A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		5265D4D31F098B18005FD42A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		5265D4D51F098B18005FD42A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		740B89806A418B502FA964AF /* Pods-twister_lite.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-twister_lite.debug.xcconfig"; path = "Pods/Target Support Files/Pods-twister_lite/Pods-twister_lite.debug.xcconfig"; sourceTree = "<group>"; };
+		CFCA580EFCC5FADA7428B81F /* Pods_twister_lite.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_twister_lite.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		E3F3DEC1AF70E75837D33DF7 /* Pods-twister_lite.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-twister_lite.release.xcconfig"; path = "Pods/Target Support Files/Pods-twister_lite/Pods-twister_lite.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -29,17 +35,28 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D0508A4DB9AE5BD7C8456DC8 /* Pods_twister_lite.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		124A07385EDAB024D03BEDD5 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				CFCA580EFCC5FADA7428B81F /* Pods_twister_lite.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		5265D4BD1F098B18005FD42A = {
 			isa = PBXGroup;
 			children = (
 				5265D4C81F098B18005FD42A /* twister_lite */,
 				5265D4C71F098B18005FD42A /* Products */,
+				95158C1EA572F77A80995AD1 /* Pods */,
+				124A07385EDAB024D03BEDD5 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -57,11 +74,21 @@
 				5265D4C91F098B18005FD42A /* AppDelegate.swift */,
 				5265D4CB1F098B18005FD42A /* ViewController.swift */,
 				5265D4CD1F098B18005FD42A /* Main.storyboard */,
+				5259A2EA1F098E38006912A5 /* LoginViewController.swift */,
 				5265D4D01F098B18005FD42A /* Assets.xcassets */,
 				5265D4D21F098B18005FD42A /* LaunchScreen.storyboard */,
 				5265D4D51F098B18005FD42A /* Info.plist */,
 			);
 			path = twister_lite;
+			sourceTree = "<group>";
+		};
+		95158C1EA572F77A80995AD1 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				740B89806A418B502FA964AF /* Pods-twister_lite.debug.xcconfig */,
+				E3F3DEC1AF70E75837D33DF7 /* Pods-twister_lite.release.xcconfig */,
+			);
+			name = Pods;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -71,9 +98,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 5265D4D81F098B18005FD42A /* Build configuration list for PBXNativeTarget "twister_lite" */;
 			buildPhases = (
+				82E73FF22344EA59933C6518 /* [CP] Check Pods Manifest.lock */,
 				5265D4C21F098B18005FD42A /* Sources */,
 				5265D4C31F098B18005FD42A /* Frameworks */,
 				5265D4C41F098B18005FD42A /* Resources */,
+				73021F431AC1E62682B0A120 /* [CP] Embed Pods Frameworks */,
+				653D9FA943E6F3826AB2829D /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -132,11 +162,60 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		653D9FA943E6F3826AB2829D /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-twister_lite/Pods-twister_lite-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		73021F431AC1E62682B0A120 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-twister_lite/Pods-twister_lite-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		82E73FF22344EA59933C6518 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		5265D4C21F098B18005FD42A /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5259A2EB1F098E38006912A5 /* LoginViewController.swift in Sources */,
 				5265D4CC1F098B18005FD42A /* ViewController.swift in Sources */,
 				5265D4CA1F098B18005FD42A /* AppDelegate.swift in Sources */,
 			);
@@ -259,6 +338,7 @@
 		};
 		5265D4D91F098B18005FD42A /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 740B89806A418B502FA964AF /* Pods-twister_lite.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = P27E4BB4CC;
@@ -272,6 +352,7 @@
 		};
 		5265D4DA1F098B18005FD42A /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = E3F3DEC1AF70E75837D33DF7 /* Pods-twister_lite.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = P27E4BB4CC;
@@ -302,6 +383,7 @@
 				5265D4DA1F098B18005FD42A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
