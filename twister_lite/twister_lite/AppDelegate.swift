@@ -7,6 +7,8 @@
 //
 
 import UIKit
+import BDBOAuth1Manager
+
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -40,7 +42,42 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func applicationWillTerminate(_ application: UIApplication) {
         // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
     }
-
+    
+    
+    func application(_ app: UIApplication, open url: URL, options: [UIApplicationOpenURLOptionsKey : Any] = [:]) -> Bool {
+        print(url)
+        
+        
+        
+        let baseURL = URL(string: "https://api.twitter.com/")
+        let consumerKey = "62zHcuZVjjIhQn7WjBpL5E0KI"
+        let consumerSecret = "2nDbfNlhqCv92pWj8x2vxUqhjciSU1wWg7XCDorVQjdlADUqi6"
+        
+        
+        let twisterClient = BDBOAuth1SessionManager(baseURL: baseURL, consumerKey: consumerKey, consumerSecret: consumerSecret)
+        
+        let requestToken = BDBOAuth1Credential(queryString: url.query)
+        
+        twisterClient?.fetchAccessToken(withPath: "oauth/access_token", method: "POST", requestToken: requestToken, success: { (response: BDBOAuth1Credential?) in
+            if let response = response {
+                print(response.token)
+            }
+        }, failure: { (error: Error?) in
+            print("\(error.debugDescription)")
+        })
+        
+        
+        
+        
+        
+        
+        return true
+    }
+    
+    
+    
+    
+    
 
 }
 
