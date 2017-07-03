@@ -56,7 +56,13 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             if let response = response {
                 print(response.token)
                 
-               client?.getUserInfo()
+                client?.getUserInfo()
+                
+                client?.getHomeTimeline()
+                
+                
+                
+                
                 
             }
         }, failure: { (error: Error?) in

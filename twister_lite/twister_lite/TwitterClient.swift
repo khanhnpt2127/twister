@@ -26,10 +26,17 @@ class TwitterClient: BDBOAuth1SessionManager {
             
             
             if let respon = response {
-                let user = respon as! NSDictionary
-                print(user["name"] as! String)
-                print(user["screen_name"] as! String)
-                print(user["profile_image_url_https"] as! String)
+                
+                let userDictionary = respon as? NSDictionary
+                
+                let user = User(dictionary: userDictionary!)
+                
+                print("\(String(describing: user.name))")
+                print("\(String(describing: user.profileUrl))")
+                print("\(String(describing: user.screenName))")
+                print("\(String(describing: user.tagLine))")
+                
+                
                 
             }
             
@@ -41,5 +48,40 @@ class TwitterClient: BDBOAuth1SessionManager {
         
         
     }
+    
+    
+    
+    func getHomeTimeline(){
+    
+        get("1.1/statuses/home_timeline.json", parameters: nil, progress: nil, success: { (task: URLSessionDataTask, response: Any?) in
+            
+            
+            if let respon = response {
+                
+                let dictionaries = respon as? [NSDictionary]
+                
+                let tweets = Tweet.tweetWithArray(dictionaries: dictionaries!)
+                
+                
+                
+                for tweet in tweets {
+                    print("\(tweet.text)")
+                }
+                
+                
+                
+                
+            }
+            
+            
+            
+        }, failure: { (task: URLSessionDataTask?, error: Error) in
+            print(error)
+        })
+        
+    }
+    
+    
+    
 }
 
