@@ -167,11 +167,31 @@
                     </navigationItem>
                     <connections>
                         <outlet property="tweetTableView" destination="VdU-O1-aPQ" id="FGx-ts-dlL"/>
+                        <segue destination="sRU-RT-DmR" kind="push" identifier="detailSegue" id="V9c-l8-CEZ"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="8iY-gQ-yVx" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1980" y="123.68815592203899"/>
+        </scene>
+        <!--Tweet Detail View Controller-->
+        <scene sceneID="HUI-9b-Cgy">
+            <objects>
+                <viewController id="sRU-RT-DmR" customClass="TweetDetailViewController" customModule="twister_lite" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="V6Z-xu-cZg"/>
+                        <viewControllerLayoutGuide type="bottom" id="h4d-FF-ctb"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="eud-da-Kgb">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="yXC-mv-5GT"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="SLh-7S-Dgv" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3135" y="-106"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="mPC-94-9c5">

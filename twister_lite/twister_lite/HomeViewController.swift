@@ -14,6 +14,9 @@ class HomeViewController: UIViewController {
     var tweetsArr = [Tweet]()
     
     
+    var selectedTweet = Tweet()
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -51,6 +54,19 @@ class HomeViewController: UIViewController {
     }
     
     
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        
+        let nextViewController = segue.destination as! TweetDetailViewController
+        
+        nextViewController.currTweet = selectedTweet
+        
+        
+    }
+    
+    
+    
+    
     /*
      // MARK: - Navigation
      
@@ -86,6 +102,12 @@ extension HomeViewController: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return tweetsArr.count
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        selectedTweet = tweetsArr[indexPath.row]
+        performSegue(withIdentifier: "detailSegue", sender: self)
+        //selectedTweet = Tweet.init(dictionary: tweetDict)
     }
     
 }

@@ -16,6 +16,10 @@ class Tweet: NSObject {
     var favoriteCount: Int = 0
     var user: User?
     
+    override init() {
+        
+    }
+    
     
     init(dictionary: NSDictionary) {
         text = dictionary["text"] as? String
