@@ -45,7 +45,7 @@
         <!--Home-->
         <scene sceneID="s5E-Qp-2T1">
             <objects>
-                <viewController automaticallyAdjustsScrollViewInsets="NO" id="aYQ-6g-cve" customClass="HomeViewController" customModule="twister_lite" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="TweetVC" automaticallyAdjustsScrollViewInsets="NO" id="aYQ-6g-cve" customClass="HomeViewController" customModule="twister_lite" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="Wnw-70-gVC"/>
                         <viewControllerLayoutGuide type="bottom" id="Hc4-Uz-zzX"/>
@@ -101,7 +101,7 @@
         <!--Navigation Controller-->
         <scene sceneID="mPC-94-9c5">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="gOn-gx-kxL" sceneMemberID="viewController">
+                <navigationController storyboardIdentifier="TweetNC" automaticallyAdjustsScrollViewInsets="NO" id="gOn-gx-kxL" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="dcL-dZ-VtE">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>

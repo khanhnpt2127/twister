@@ -24,6 +24,22 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
               //red:0.20, green:0.60, blue:0.86, alpha:1.0
         
         
+        
+        if User.currenUser != nil {
+            print("users exits")
+            let storyboard = UIStoryboard(name: "Main", bundle: nil)
+            let nc = storyboard.instantiateViewController(withIdentifier: "TweetNC")
+            
+            window?.rootViewController = nc
+            window?.makeKeyAndVisible()
+        
+        }
+        else {
+            
+        }
+        
+        
+        
         return true
     }
     

@@ -34,6 +34,13 @@ class TwitterClient: BDBOAuth1SessionManager {
             if let response = response {
                 print(response.token)
                
+                self.getUserInfo(success: { (user: User) in
+                    User.currenUser = user
+                    self.loginSuccess?()
+                }, failure: { (error: Error) in
+                    self.loginFailure?(error)
+                })
+                
                 
                 self.loginSuccess?()
                 
@@ -79,21 +86,22 @@ class TwitterClient: BDBOAuth1SessionManager {
     }
     
     
-    func getUserInfo(){
+    func getUserInfo(success: @escaping (User)->(), failure: @escaping (Error)->()){
         get("1.1/account/verify_credentials.json", parameters: nil, progress: nil, success: { (task: URLSessionDataTask, response: Any?) in
             
             
             if let respon = response {
                 
+                
+                
+                print(respon)
+                
                 let userDictionary = respon as? NSDictionary
                 
                 let user = User(dictionary: userDictionary!)
                 
-//                print("\(String(describing: user.name))")
-//                print("\(String(describing: user.profileUrl))")
-//                print("\(String(describing: user.screenName))")
-//                print("\(String(describing: user.tagLine))")
-//                
+                
+                success(user)
                 
                 
             }
@@ -101,7 +109,7 @@ class TwitterClient: BDBOAuth1SessionManager {
             
             
         }, failure: { (task: URLSessionDataTask?, error: Error) in
-            print(error)
+            failure(error)
         })
         
         
