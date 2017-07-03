@@ -34,10 +34,31 @@
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </view>
+                    <connections>
+                        <segue destination="aYQ-6g-cve" kind="presentation" identifier="loginSergue" id="2ka-P5-yd4"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="117.59999999999999" y="123.68815592203899"/>
+        </scene>
+        <!--Home View Controller-->
+        <scene sceneID="s5E-Qp-2T1">
+            <objects>
+                <viewController id="aYQ-6g-cve" customClass="HomeViewController" customModule="twister_lite" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Wnw-70-gVC"/>
+                        <viewControllerLayoutGuide type="bottom" id="Hc4-Uz-zzX"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="sv3-7B-YqT">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="8iY-gQ-yVx" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1041" y="124"/>
         </scene>
     </scenes>
 </document>

@@ -1,5 +1,5 @@
 //
-//  LoginViewController.swift
+//  HomeViewController.swift
 //  twister_lite
 //
 //  Created by TK Nguyen on 7/3/17.
@@ -7,14 +7,22 @@
 //
 
 import UIKit
-import BDBOAuth1Manager
 
-
-class LoginViewController: UIViewController {
+class HomeViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        
+        
+        let client = TwitterClient.sharedInstance
+        
+        
+        client?.getHomeTimeline(success: { (tweets: [Tweet]) in
+            
+        }, failure: { (error: Error) in
+            
+        })
         // Do any additional setup after loading the view.
     }
 
@@ -23,19 +31,6 @@ class LoginViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
-    @IBAction func onLoginButton(_ sender: Any) {
-        
-        
-        let client = TwitterClient.sharedInstance
-        client?.login(success: { () -> () in
-            self.performSegue(withIdentifier: "loginSergue", sender: nil)
-        }, failure: { (error: Error) in
-           
-        })
-        
-        
-        
-    }
 
     /*
     // MARK: - Navigation

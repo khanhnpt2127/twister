@@ -50,24 +50,13 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         
         let client = TwitterClient.sharedInstance
-        let requestToken = BDBOAuth1Credential(queryString: url.query)
+     
         
-        TwitterClient.sharedInstance?.fetchAccessToken(withPath: "oauth/access_token", method: "POST", requestToken: requestToken, success: { (response: BDBOAuth1Credential?) in
-            if let response = response {
-                print(response.token)
-                
-                client?.getUserInfo()
-                
-                client?.getHomeTimeline()
-                
-                
-                
-                
-                
-            }
-        }, failure: { (error: Error?) in
-            print("\(error.debugDescription)")
-        })
+        
+        
+        client?.handleOpenUrl(url: url)
+        
+     
         
         
         

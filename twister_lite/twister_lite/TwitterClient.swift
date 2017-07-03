@@ -21,6 +21,64 @@ class TwitterClient: BDBOAuth1SessionManager {
     static var sharedInstance =  TwitterClient(baseURL: baseUrl, consumerKey: consumerKey, consumerSecret: consumerSecret)
     
     
+    
+    var loginSuccess: (() -> ())?
+    var loginFailure: ((Error) -> ())?
+    
+    
+    
+    
+    func handleOpenUrl(url: URL){
+        let requestToken = BDBOAuth1Credential(queryString: url.query)
+        fetchAccessToken(withPath: "oauth/access_token", method: "POST", requestToken: requestToken, success: { (response: BDBOAuth1Credential?) in
+            if let response = response {
+                print(response.token)
+               
+                
+                self.loginSuccess?()
+                
+                
+                
+            }
+        }, failure: { (error: Error?) in
+            
+            self.loginFailure?(error!)
+            print("\(error.debugDescription)")
+        })
+    }
+    
+    
+    
+    func login(success: @escaping ()->(), failure: @escaping (Error)->()){
+        
+        loginSuccess = success
+        loginFailure = failure
+        
+        fetchRequestToken(withPath: "oauth/request_token", method: "POST", callbackURL: URL(string:"twisterlite://"), scope: nil, success: { (respone: BDBOAuth1Credential?) in
+            
+            
+            if let respone = respone {
+                print(respone.token)
+                
+                let authURL = URL(string: "https://api.twitter.com/oauth/authenticate?oauth_token=\(respone.token!)")
+                UIApplication.shared.open(authURL!, options: [:], completionHandler: nil)
+                
+                
+            }
+            
+            
+            
+            
+        }, failure: { (error: Error?) in
+            
+            self.loginFailure?(error!)
+            print("\(String(describing: error?.localizedDescription))")
+        })
+        
+    
+    }
+    
+    
     func getUserInfo(){
         get("1.1/account/verify_credentials.json", parameters: nil, progress: nil, success: { (task: URLSessionDataTask, response: Any?) in
             
@@ -31,11 +89,11 @@ class TwitterClient: BDBOAuth1SessionManager {
                 
                 let user = User(dictionary: userDictionary!)
                 
-                print("\(String(describing: user.name))")
-                print("\(String(describing: user.profileUrl))")
-                print("\(String(describing: user.screenName))")
-                print("\(String(describing: user.tagLine))")
-                
+//                print("\(String(describing: user.name))")
+//                print("\(String(describing: user.profileUrl))")
+//                print("\(String(describing: user.screenName))")
+//                print("\(String(describing: user.tagLine))")
+//                
                 
                 
             }
@@ -51,7 +109,7 @@ class TwitterClient: BDBOAuth1SessionManager {
     
     
     
-    func getHomeTimeline(){
+    func getHomeTimeline(success: @escaping ([Tweet]) -> (), failure: @escaping (Error) -> ()){
     
         get("1.1/statuses/home_timeline.json", parameters: nil, progress: nil, success: { (task: URLSessionDataTask, response: Any?) in
             
@@ -63,11 +121,7 @@ class TwitterClient: BDBOAuth1SessionManager {
                 let tweets = Tweet.tweetWithArray(dictionaries: dictionaries!)
                 
                 
-                
-                for tweet in tweets {
-                    print("\(tweet.text)")
-                }
-                
+                success(tweets)
                 
                 
                 
@@ -76,7 +130,7 @@ class TwitterClient: BDBOAuth1SessionManager {
             
             
         }, failure: { (task: URLSessionDataTask?, error: Error) in
-            print(error)
+            failure(error)
         })
         
     }
