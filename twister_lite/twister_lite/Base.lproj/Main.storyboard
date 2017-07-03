@@ -89,7 +89,14 @@
                             <constraint firstAttribute="trailing" secondItem="VdU-O1-aPQ" secondAttribute="trailing" id="sx2-ed-dQK"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="Home" id="Csa-te-748"/>
+                    <navigationItem key="navigationItem" title="Home" id="Csa-te-748">
+                        <barButtonItem key="leftBarButtonItem" title="Sign out" id="9GI-Ak-2aE">
+                            <connections>
+                                <action selector="onSignOut:" destination="aYQ-6g-cve" id="4Cc-ZT-5FI"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" title="New" id="RFV-Gu-ETT"/>
+                    </navigationItem>
                     <connections>
                         <outlet property="tweetTableView" destination="VdU-O1-aPQ" id="FGx-ts-dlL"/>
                     </connections>

@@ -36,6 +36,15 @@ class HomeViewController: UIViewController {
         // Do any additional setup after loading the view.
     }
     
+    @IBAction func onSignOut(_ sender: Any) {
+        
+        let client = TwitterClient.sharedInstance
+        
+        client?.Logout()
+        
+        
+        
+    }
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.

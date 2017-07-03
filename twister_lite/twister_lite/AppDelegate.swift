@@ -34,11 +34,16 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             window?.makeKeyAndVisible()
         
         }
-        else {
+        
+        NotificationCenter.default.addObserver(forName: NSNotification.Name(rawValue: "UserDidLogout"), object: nil, queue: OperationQueue.main) { (noti: Notification) in
+            
+            let storyboard = UIStoryboard(name: "Main", bundle: nil)
+            let nc = storyboard.instantiateInitialViewController()
+            
+            self.window?.rootViewController = nc
+            
             
         }
-        
-        
         
         return true
     }
