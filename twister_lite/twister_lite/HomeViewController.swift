@@ -69,7 +69,15 @@ extension HomeViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "tweetCell") as! TweetTableViewCell
         
-        cell.nameLabel.text = tweetsArr[indexPath.row].text
+        
+        
+        cell.UserImageView.setImageWith((tweetsArr[indexPath.row].user?.profileUrl)!)
+        cell.nameLabel.text = tweetsArr[indexPath.row].user?.name
+        cell.screennameLabel.text = tweetsArr[indexPath.row].user?.screenName
+        cell.contentLabel.text = tweetsArr[indexPath.row].text
+        
+        
+        
         
         return cell
         

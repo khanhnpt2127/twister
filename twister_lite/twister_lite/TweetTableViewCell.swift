@@ -11,6 +11,17 @@ import UIKit
 class TweetTableViewCell: UITableViewCell {
 
     @IBOutlet weak var nameLabel: UILabel!
+    
+    @IBOutlet weak var UserImageView: UIImageView!
+    
+    @IBOutlet weak var screennameLabel: UILabel!
+    
+    @IBOutlet weak var hourLabel: UILabel!
+    
+    @IBOutlet weak var contentLabel: UILabel!
+    
+    @IBOutlet weak var retweetLabel: UILabel!
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
