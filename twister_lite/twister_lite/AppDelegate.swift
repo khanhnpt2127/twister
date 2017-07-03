@@ -61,10 +61,31 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         twisterClient?.fetchAccessToken(withPath: "oauth/access_token", method: "POST", requestToken: requestToken, success: { (response: BDBOAuth1Credential?) in
             if let response = response {
                 print(response.token)
+                
+                twisterClient?.get("1.1/account/verify_credentials.json", parameters: nil, progress: nil, success: { (task: URLSessionDataTask, response: Any?) in
+                    
+                    
+                    if let respon = response {
+                        let user = respon as! NSDictionary
+                        print(user["name"] as! String)
+                        print(user["screen_name"] as! String)
+                        print(user["profile_image_url_https"] as! String)
+                        
+                    }
+                    
+                    
+                    
+                }, failure: { (task: URLSessionDataTask?, error: Error) in
+                    print(error)
+                })
+                
+                
+                
             }
         }, failure: { (error: Error?) in
             print("\(error.debugDescription)")
         })
+
         
         
         
