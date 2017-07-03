@@ -25,13 +25,9 @@ class LoginViewController: UIViewController {
     
     @IBAction func onLoginButton(_ sender: Any) {
         
-        let baseURL = URL(string: "https://api.twitter.com/")
-        let consumerKey = "62zHcuZVjjIhQn7WjBpL5E0KI"
-        let consumerSecret = "2nDbfNlhqCv92pWj8x2vxUqhjciSU1wWg7XCDorVQjdlADUqi6"
         
         
-        let twisterClient = BDBOAuth1SessionManager(baseURL: baseURL, consumerKey: consumerKey, consumerSecret: consumerSecret)
-        twisterClient?.fetchRequestToken(withPath: "oauth/request_token", method: "POST", callbackURL: URL(string:"twisterlite://"), scope: nil, success: { (respone: BDBOAuth1Credential?) in
+        TwitterClient.sharedInstance?.fetchRequestToken(withPath: "oauth/request_token", method: "POST", callbackURL: URL(string:"twisterlite://"), scope: nil, success: { (respone: BDBOAuth1Credential?) in
             
             
             if let respone = respone {

@@ -9,10 +9,10 @@
 /* Begin PBXBuildFile section */
 		5259A2EB1F098E38006912A5 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5259A2EA1F098E38006912A5 /* LoginViewController.swift */; };
 		5265D4CA1F098B18005FD42A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5265D4C91F098B18005FD42A /* AppDelegate.swift */; };
-		5265D4CC1F098B18005FD42A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5265D4CB1F098B18005FD42A /* ViewController.swift */; };
 		5265D4CF1F098B18005FD42A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5265D4CD1F098B18005FD42A /* Main.storyboard */; };
 		5265D4D11F098B18005FD42A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5265D4D01F098B18005FD42A /* Assets.xcassets */; };
 		5265D4D41F098B18005FD42A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5265D4D21F098B18005FD42A /* LaunchScreen.storyboard */; };
+		52B4F7941F0A10B2004F071B /* TwitterClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52B4F7931F0A10B2004F071B /* TwitterClient.swift */; };
 		D0508A4DB9AE5BD7C8456DC8 /* Pods_twister_lite.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CFCA580EFCC5FADA7428B81F /* Pods_twister_lite.framework */; };
 /* End PBXBuildFile section */
 
@@ -20,11 +20,11 @@
 		5259A2EA1F098E38006912A5 /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		5265D4C61F098B18005FD42A /* twister_lite.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = twister_lite.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5265D4C91F098B18005FD42A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		5265D4CB1F098B18005FD42A /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		5265D4CE1F098B18005FD42A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		5265D4D01F098B18005FD42A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		5265D4D31F098B18005FD42A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		5265D4D51F098B18005FD42A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		52B4F7931F0A10B2004F071B /* TwitterClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TwitterClient.swift; sourceTree = "<group>"; };
 		740B89806A418B502FA964AF /* Pods-twister_lite.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-twister_lite.debug.xcconfig"; path = "Pods/Target Support Files/Pods-twister_lite/Pods-twister_lite.debug.xcconfig"; sourceTree = "<group>"; };
 		CFCA580EFCC5FADA7428B81F /* Pods_twister_lite.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_twister_lite.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E3F3DEC1AF70E75837D33DF7 /* Pods-twister_lite.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-twister_lite.release.xcconfig"; path = "Pods/Target Support Files/Pods-twister_lite/Pods-twister_lite.release.xcconfig"; sourceTree = "<group>"; };
@@ -71,15 +71,47 @@
 		5265D4C81F098B18005FD42A /* twister_lite */ = {
 			isa = PBXGroup;
 			children = (
+				52B4F7921F0A108C004F071B /* API */,
+				52B4F7911F0A0FE7004F071B /* Model */,
+				52B4F7901F0A0FE1004F071B /* ViewController */,
+				52B4F78F1F0A0FD9004F071B /* View */,
 				5265D4C91F098B18005FD42A /* AppDelegate.swift */,
-				5265D4CB1F098B18005FD42A /* ViewController.swift */,
 				5265D4CD1F098B18005FD42A /* Main.storyboard */,
-				5259A2EA1F098E38006912A5 /* LoginViewController.swift */,
 				5265D4D01F098B18005FD42A /* Assets.xcassets */,
 				5265D4D21F098B18005FD42A /* LaunchScreen.storyboard */,
 				5265D4D51F098B18005FD42A /* Info.plist */,
 			);
 			path = twister_lite;
+			sourceTree = "<group>";
+		};
+		52B4F78F1F0A0FD9004F071B /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
+		52B4F7901F0A0FE1004F071B /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				5259A2EA1F098E38006912A5 /* LoginViewController.swift */,
+			);
+			name = ViewController;
+			sourceTree = "<group>";
+		};
+		52B4F7911F0A0FE7004F071B /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		52B4F7921F0A108C004F071B /* API */ = {
+			isa = PBXGroup;
+			children = (
+				52B4F7931F0A10B2004F071B /* TwitterClient.swift */,
+			);
+			name = API;
 			sourceTree = "<group>";
 		};
 		95158C1EA572F77A80995AD1 /* Pods */ = {
@@ -216,7 +248,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				5259A2EB1F098E38006912A5 /* LoginViewController.swift in Sources */,
-				5265D4CC1F098B18005FD42A /* ViewController.swift in Sources */,
+				52B4F7941F0A10B2004F071B /* TwitterClient.swift in Sources */,
 				5265D4CA1F098B18005FD42A /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
