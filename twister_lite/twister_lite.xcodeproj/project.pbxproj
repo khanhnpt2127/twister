@@ -16,6 +16,7 @@
 		52B4F7961F0A15A5004F071B /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52B4F7951F0A15A5004F071B /* User.swift */; };
 		52B4F7981F0A15AE004F071B /* Tweet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52B4F7971F0A15AE004F071B /* Tweet.swift */; };
 		52B4F79A1F0A23E4004F071B /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52B4F7991F0A23E4004F071B /* HomeViewController.swift */; };
+		52B4F79C1F0A2A2A004F071B /* TweetTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52B4F79B1F0A2A2A004F071B /* TweetTableViewCell.swift */; };
 		D0508A4DB9AE5BD7C8456DC8 /* Pods_twister_lite.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CFCA580EFCC5FADA7428B81F /* Pods_twister_lite.framework */; };
 /* End PBXBuildFile section */
 
@@ -31,6 +32,7 @@
 		52B4F7951F0A15A5004F071B /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		52B4F7971F0A15AE004F071B /* Tweet.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Tweet.swift; sourceTree = "<group>"; };
 		52B4F7991F0A23E4004F071B /* HomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		52B4F79B1F0A2A2A004F071B /* TweetTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TweetTableViewCell.swift; sourceTree = "<group>"; };
 		740B89806A418B502FA964AF /* Pods-twister_lite.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-twister_lite.debug.xcconfig"; path = "Pods/Target Support Files/Pods-twister_lite/Pods-twister_lite.debug.xcconfig"; sourceTree = "<group>"; };
 		CFCA580EFCC5FADA7428B81F /* Pods_twister_lite.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_twister_lite.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E3F3DEC1AF70E75837D33DF7 /* Pods-twister_lite.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-twister_lite.release.xcconfig"; path = "Pods/Target Support Files/Pods-twister_lite/Pods-twister_lite.release.xcconfig"; sourceTree = "<group>"; };
@@ -93,6 +95,7 @@
 		52B4F78F1F0A0FD9004F071B /* View */ = {
 			isa = PBXGroup;
 			children = (
+				52B4F79B1F0A2A2A004F071B /* TweetTableViewCell.swift */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -262,6 +265,7 @@
 				52B4F7941F0A10B2004F071B /* TwitterClient.swift in Sources */,
 				5265D4CA1F098B18005FD42A /* AppDelegate.swift in Sources */,
 				52B4F79A1F0A23E4004F071B /* HomeViewController.swift in Sources */,
+				52B4F79C1F0A2A2A004F071B /* TweetTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
