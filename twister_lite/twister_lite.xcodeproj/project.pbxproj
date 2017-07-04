@@ -18,6 +18,7 @@
 		52B4F79A1F0A23E4004F071B /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52B4F7991F0A23E4004F071B /* HomeViewController.swift */; };
 		52B4F79C1F0A2A2A004F071B /* TweetTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52B4F79B1F0A2A2A004F071B /* TweetTableViewCell.swift */; };
 		52D5A2191F0A4EE500FBE3FF /* TweetDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52D5A2181F0A4EE500FBE3FF /* TweetDetailViewController.swift */; };
+		52D5A21B1F0B370000FBE3FF /* NewTweetViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52D5A21A1F0B370000FBE3FF /* NewTweetViewController.swift */; };
 		D0508A4DB9AE5BD7C8456DC8 /* Pods_twister_lite.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CFCA580EFCC5FADA7428B81F /* Pods_twister_lite.framework */; };
 /* End PBXBuildFile section */
 
@@ -35,6 +36,7 @@
 		52B4F7991F0A23E4004F071B /* HomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		52B4F79B1F0A2A2A004F071B /* TweetTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TweetTableViewCell.swift; sourceTree = "<group>"; };
 		52D5A2181F0A4EE500FBE3FF /* TweetDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TweetDetailViewController.swift; sourceTree = "<group>"; };
+		52D5A21A1F0B370000FBE3FF /* NewTweetViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewTweetViewController.swift; sourceTree = "<group>"; };
 		740B89806A418B502FA964AF /* Pods-twister_lite.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-twister_lite.debug.xcconfig"; path = "Pods/Target Support Files/Pods-twister_lite/Pods-twister_lite.debug.xcconfig"; sourceTree = "<group>"; };
 		CFCA580EFCC5FADA7428B81F /* Pods_twister_lite.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_twister_lite.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E3F3DEC1AF70E75837D33DF7 /* Pods-twister_lite.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-twister_lite.release.xcconfig"; path = "Pods/Target Support Files/Pods-twister_lite/Pods-twister_lite.release.xcconfig"; sourceTree = "<group>"; };
@@ -108,6 +110,7 @@
 				5259A2EA1F098E38006912A5 /* LoginViewController.swift */,
 				52B4F7991F0A23E4004F071B /* HomeViewController.swift */,
 				52D5A2181F0A4EE500FBE3FF /* TweetDetailViewController.swift */,
+				52D5A21A1F0B370000FBE3FF /* NewTweetViewController.swift */,
 			);
 			name = ViewController;
 			sourceTree = "<group>";
@@ -269,6 +272,7 @@
 				5265D4CA1F098B18005FD42A /* AppDelegate.swift in Sources */,
 				52D5A2191F0A4EE500FBE3FF /* TweetDetailViewController.swift in Sources */,
 				52B4F79A1F0A23E4004F071B /* HomeViewController.swift in Sources */,
+				52D5A21B1F0B370000FBE3FF /* NewTweetViewController.swift in Sources */,
 				52B4F79C1F0A2A2A004F071B /* TweetTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

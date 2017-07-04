@@ -16,6 +16,8 @@ class User: NSObject {
     var tagLine: String?
     
     
+    
+    
     var dictionary: NSDictionary?
     
     init(dictionary: NSDictionary) {

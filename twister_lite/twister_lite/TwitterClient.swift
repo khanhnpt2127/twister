@@ -8,6 +8,7 @@
 
 import UIKit
 import BDBOAuth1Manager
+import AFNetworking
 
 let baseUrl = URL(string: "https://api.twitter.com/")
 let consumerKey = "62zHcuZVjjIhQn7WjBpL5E0KI"
@@ -152,6 +153,14 @@ class TwitterClient: BDBOAuth1SessionManager {
         })
         
     }
+    
+    func postTweet(){
+        
+    }
+    
+    
+    
+    
     
     
     

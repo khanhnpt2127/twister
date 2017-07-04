@@ -12,7 +12,8 @@ class HomeViewController: UIViewController {
     
     @IBOutlet weak var tweetTableView: UITableView!
     var tweetsArr = [Tweet]()
-    
+    var refreshControl = UIRefreshControl()
+
     
     var selectedTweet = Tweet()
     
@@ -20,11 +21,26 @@ class HomeViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+      
+        
+        
+        refreshControl.attributedTitle = NSAttributedString(string: "Pull to refresh!!!")
+        refreshControl.addTarget(self, action: #selector(HomeViewController.fetchData), for: UIControlEvents.valueChanged)
+        
+        
+        tweetTableView.addSubview(refreshControl)
+        
         
         
         self.tweetTableView.delegate = self
         self.tweetTableView.dataSource = self
         
+      
+        // Do any additional setup after loading the view.
+    }
+    
+    func fetchData(){
+    
         let client = TwitterClient.sharedInstance
         
         
@@ -33,11 +49,15 @@ class HomeViewController: UIViewController {
                 self.tweetsArr.append(tweet)
             }
             self.tweetTableView.reloadData()
+            self.refreshControl.endRefreshing()
         }, failure: { (error: Error) in
             
+            self.refreshControl.endRefreshing()
         })
-        // Do any additional setup after loading the view.
+        
     }
+    
+    
     
     @IBAction func onSignOut(_ sender: Any) {
         
@@ -57,9 +77,15 @@ class HomeViewController: UIViewController {
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         
-        let nextViewController = segue.destination as! TweetDetailViewController
         
-        nextViewController.currTweet = selectedTweet
+        if sender is TweetDetailViewController {
+            let nextViewController = segue.destination as! TweetDetailViewController
+            
+            nextViewController.currTweet = selectedTweet
+        }
+        
+        
+        
         
         
     }
