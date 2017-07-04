@@ -165,7 +165,7 @@
                         </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" title="New" id="RFV-Gu-ETT">
                             <connections>
-                                <segue destination="3q4-df-7ce" kind="push" id="OQr-X6-5f1"/>
+                                <segue destination="gck-Rm-T4r" kind="presentation" id="GeL-A9-ddk"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -230,17 +230,27 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="pYe-NB-bR1">
-                        <barButtonItem key="rightBarButtonItem" title="Tweet" id="cC0-jC-Dj0"/>
+                        <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="YUU-sY-Lrt">
+                            <connections>
+                                <action selector="onCancel:" destination="3q4-df-7ce" id="D8K-nw-upj"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" title="Tweet" id="cC0-jC-Dj0">
+                            <connections>
+                                <action selector="onTweet:" destination="3q4-df-7ce" id="unC-b1-yho"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                     <connections>
                         <outlet property="nameLabel" destination="jMo-WM-l13" id="PWi-MH-hbD"/>
                         <outlet property="screennameLabel" destination="UfM-cE-3LR" id="Uip-GB-gAI"/>
+                        <outlet property="tweetTF" destination="lW8-6h-nN4" id="zFE-fE-YfW"/>
                         <outlet property="userImage" destination="kJm-SF-c4w" id="A7g-b6-1uB"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hN5-1G-ec6" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3134" y="644"/>
+            <point key="canvasLocation" x="4072.8000000000002" y="643.62818590704649"/>
         </scene>
         <!--Tweet Detail View Controller-->
         <scene sceneID="HUI-9b-Cgy">
@@ -278,6 +288,24 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="S2Y-nL-5pi" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1040.8" y="123.68815592203899"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="TUZ-2J-sU2">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="gck-Rm-T4r" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="vx8-9y-oiP">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="3q4-df-7ce" kind="relationship" relationship="rootViewController" id="IK9-jF-NVL"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="SJb-07-xMt" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3133.5999999999999" y="643.62818590704649"/>
         </scene>
     </scenes>
 </document>

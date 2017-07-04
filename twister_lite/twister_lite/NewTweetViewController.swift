@@ -13,6 +13,7 @@ class NewTweetViewController: UIViewController {
     
     
     
+    @IBOutlet weak var tweetTF: UITextField!
     @IBOutlet weak var userImage: UIImageView!
     @IBOutlet weak var nameLabel: UILabel!
     @IBOutlet weak var screennameLabel: UILabel!
@@ -37,6 +38,22 @@ class NewTweetViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
+    @IBAction func onCancel(_ sender: Any) {
+        dismiss(animated: true, completion: nil)
+    }
+    @IBAction func onTweet(_ sender: Any) {
+        
+        let params = NSMutableDictionary()
+        let content = self.tweetTF.text
+        
+        
+        params.setValue(content, forKey: "status")
+        let client = TwitterClient.sharedInstance
+        client?.postTweet(param: params)
+        dismiss(animated: true, completion: nil)
+        
+        
+    }
 
     /*
     // MARK: - Navigation

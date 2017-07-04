@@ -23,7 +23,7 @@ class HomeViewController: UIViewController {
         
       
         
-        
+        fetchData()
         refreshControl.attributedTitle = NSAttributedString(string: "Pull to refresh!!!")
         refreshControl.addTarget(self, action: #selector(HomeViewController.fetchData), for: UIControlEvents.valueChanged)
         
